@@ -1,0 +1,44 @@
+<div class="container">
+  <h4 class="display-4"><%= @konfe.name %></h4>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p><b>Instagram:</b> <%= @konfe.insta_uname %> | </p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+
+
+
+
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @konfe.name %>
+</p>
+
+<p>
+  <strong>Insta uname:</strong>
+  <%= @konfe.insta_uname %>
+</p>
+
+<p>
+  <strong>Snap uname:</strong>
+  <%= @konfe.snap_uname %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @konfe.age %>
+</p>
+
+<p>
+  <strong>Quote:</strong>
+  <%= @konfe.quote %>
+</p>
+
+<%= link_to 'Edit', edit_konfe_path(@konfe) %> |
+<%= link_to 'Back', konves_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Directory</h3><br/><br/>
+
+<div class="container"> <table class="table table-hover">
+  <thead>
+    <tr class="table-active">
+      <th>Name</th>
+      <th>Instagram</th>
+      <th>Snapchat</th>
+      <th>Age</th>
+      <th>Quote</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @konves.each do |konfe| %>
+      <tr>
+        <td><%= konfe.name %></td>
+        <td><%= konfe.insta_uname %></td>
+        <td><%= konfe.snap_uname %></td>
+        <td><%= konfe.age %></td>
+        <td><%= konfe.quote %></td>
+        <td><%= link_to 'Show', konfe %></td>
+        <td><%= link_to 'Edit', edit_konfe_path(konfe) %></td>
+        <td><%= link_to 'Destroy', konfe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table></div>
+
+<br>
+
+<%= link_to 'New Konfe', new_konfe_path %>

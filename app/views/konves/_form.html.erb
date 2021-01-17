@@ -1,0 +1,41 @@
+<%= form_with(model: konfe) do |form| %>
+  <% if konfe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(konfe.errors.count, "error") %> prohibited this konfe from being saved:</h2>
+
+      <ul>
+        <% konfe.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field container">
+   <%= form.text_field :name, class:"form-control text-center", placeholder: "Name" %>
+  </div><br/>
+
+  <div class="field container">
+    
+    <%= form.text_field :insta_uname, class:"form-control text-center", placeholder: "Instagram Username"  %>
+  </div><br/>
+
+  <div class="field container">
+
+    <%= form.text_field :snap_uname, class:"form-control text-center", placeholder: "Snapchat Username"  %>
+  </div><br/>
+
+  <div class="field container">
+    
+    <%= form.text_field :age, class:"form-control text-center", placeholder: "Age"  %>
+  </div><br/>
+
+  <div class="field container">
+    
+    <%= form.text_field :quote, class:"form-control text-center", placeholder: "Quote"  %>
+  </div><br/><br/>
+
+  <div class="actions container">
+    <%= form.submit "Submit" , class:"btn btn-outline-primary" %>
+  </div>
+<% end %>

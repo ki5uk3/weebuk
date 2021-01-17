@@ -1,0 +1,2 @@
+class Konfe < ApplicationRecord
+end
