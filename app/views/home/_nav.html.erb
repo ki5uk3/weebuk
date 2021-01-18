@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <%= link_to "Snapnames", root_path, class:"navbar-brand" %>
+  <%= link_to "Webook", root_path, class:"navbar-brand" %>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -9,15 +10,33 @@
     <li class="nav-item">
         <%= link_to "Directory", konves_path, class:"nav-link" %>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Sign In</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Sign Up</a>
-      </li>
+ 
+
       <li class="nav-item">
         <%= link_to "About", home_about_path, class:"nav-link" %>
       </li>
+
+
+      <% if user_signed_in? %>
+
+      <li class="nav-item">
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete,class:"nav-link" %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to "Edit Profile", edit_user_registration_path,class:"nav-link" %>
+      </li>
+      <% else %>
+
+
+      <li class="nav-item">
+        <%= link_to "Sign In", new_user_session_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Sign Up", new_user_registration_path, class:"nav-link" %>
+      </li>
+
+     <% end %>
       
     </ul>
     <form class="form-inline my-2 my-lg-0">

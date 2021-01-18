@@ -28,7 +28,7 @@ class KonvesController < ApplicationController
 
     respond_to do |format|
       if @konfe.save
-        format.html { redirect_to @konfe, notice: 'Konfe was successfully created.' }
+        format.html { redirect_to @konfe, notice: 'Your Profile was successfully created. 🎉' }
         format.json { render :show, status: :created, location: @konfe }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class KonvesController < ApplicationController
   def update
     respond_to do |format|
       if @konfe.update(konfe_params)
-        format.html { redirect_to @konfe, notice: 'Konfe was successfully updated.' }
+        format.html { redirect_to @konfe, notice: 'Your Profile was successfully updated. 😁' }
         format.json { render :show, status: :ok, location: @konfe }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class KonvesController < ApplicationController
   def destroy
     @konfe.destroy
     respond_to do |format|
-      format.html { redirect_to konves_url, notice: 'Konfe was successfully destroyed.' }
+      format.html { redirect_to konves_url, notice: 'Your Konfe was successfully destroyed. 🥺' }
       format.json { head :no_content }
     end
   end

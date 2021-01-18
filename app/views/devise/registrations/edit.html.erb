@@ -1,0 +1,66 @@
+<% resource_name.to_s.humanize %>
+
+  
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+
+
+
+<div class="card bg-light mb-3" style="max-width: 25rem;">
+  <div class="card-header"><h3>Settings 🛠</h3></div>
+  <div class="card-body">
+
+
+  <div class="form-container">
+    <%= f.label :New_Email %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class:"form-control text-center", placeholder: "Enter New Email"%>
+  </div><br/>
+
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="form-container">
+    <%= f.label :New_Password %> <i>(leave blank if you don't want to change)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password" ,class:"form-control text-center", placeholder: "Enter New Password" %>
+   </div><br/>
+
+
+
+
+
+  <div class="form-container">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control text-center", placeholder: "Enter New Password Again"  %>
+  </div><br/>
+
+  <div class="form-container">
+    <%= f.label :current_password %><br />
+    <%= f.password_field :current_password, autocomplete: "current-password",class:"form-control text-center", placeholder: "Enter Current Password" %>
+  </div>
+  <hr class="my-3">
+
+  <div class="actions">
+    <%= f.submit "Update", class:"btn btn-outline-success" %>
+  </div>
+<% end %>
+
+</div></div>
+
+
+
+
+<div class="card bg-light mb-3" style="max-width: 25rem;">
+ <div class="card-body">
+  
+<h4 style="color: red">Delete Account</h4>
+
+<p class="lead" style="color: #FFFFB7">Are You Sure ? 🥺 <%= button_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-outline-danger" %></p>
+
+<%= link_to "Back", :back,class:"btn btn-outline-dark"  %>
+
+
+  </div>
+</div>

@@ -1,35 +1,21 @@
-<p id="notice"><%= notice %></p>
 
-<h3>Directory</h3><br/><br/>
+<h3>Directory 📖</h3>
 
-<div class="container"> <table class="table table-hover">
-  <thead>
-    <tr class="table-active">
-      <th>Name</th>
-      <th>Instagram</th>
-      <th>Snapchat</th>
-      <th>Age</th>
-      <th>Quote</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<hr class="my-3">
+<%= link_to 'New Webook', new_konfe_path, class:"btn btn-outline-primary" %>
+<hr class="my-2">
 
-  <tbody>
-    <% @konves.each do |konfe| %>
-      <tr>
-        <td><%= konfe.name %></td>
-        <td><%= konfe.insta_uname %></td>
-        <td><%= konfe.snap_uname %></td>
-        <td><%= konfe.age %></td>
-        <td><%= konfe.quote %></td>
-        <td><%= link_to 'Show', konfe %></td>
-        <td><%= link_to 'Edit', edit_konfe_path(konfe) %></td>
-        <td><%= link_to 'Destroy', konfe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table></div>
 
-<br>
 
-<%= link_to 'New Konfe', new_konfe_path %>
+
+<% @konves.each do |konfe| %>
+<div class="card bg-light mb-2" style="max-width: 20rem;">
+    <div class="card-body">
+    <h5 class="card-title"><%= konfe.name %></h5>
+    <p class="lead" style="color: white"><b>Age</b> :<strong style="color: #FFFFB7">
+  <%= konfe.age %></strong></p>
+  <td><%= link_to 'Show More', konfe, class:"btn btn-outline-success" %></td>
+  </div>
+</div>
+
+  <% end %>

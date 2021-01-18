@@ -1,7 +1,7 @@
 <%= form_with(model: konfe) do |form| %>
   <% if konfe.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(konfe.errors.count, "error") %> prohibited this konfe from being saved:</h2>
+      <h2><%= pluralize(konfe.errors.count, "error") %> prohibited this Webook Profile from being saved:</h2>
 
       <ul>
         <% konfe.errors.each do |error| %>
@@ -10,6 +10,16 @@
       </ul>
     </div>
   <% end %>
+
+
+<div class="card bg-light mb-3" style="max-width: 25rem;">
+   <div class="card-body">
+    <h3 class="card-title">👨‍💻</h3>
+    <p class="lead" style="color: 
+    #FFFFB7">Webook, Simple SocialMedia Directory</p>
+  <p>Just enter your Name, Snapchat-Instagram Username, Age and A Quote written by <i style="color: #FFFFB7" >you.</i> :3</p>
+
+
 
   <div class="field container">
    <%= form.text_field :name, class:"form-control text-center", placeholder: "Name" %>
@@ -33,9 +43,15 @@
   <div class="field container">
     
     <%= form.text_field :quote, class:"form-control text-center", placeholder: "Quote"  %>
-  </div><br/><br/>
+  </div>
+  <hr class="my-3">
 
   <div class="actions container">
     <%= form.submit "Submit" , class:"btn btn-outline-primary" %>
   </div>
+
+
+  </div>
+</div>
+
 <% end %>

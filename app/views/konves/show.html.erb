@@ -1,44 +1,30 @@
-<div class="container">
-  <h4 class="display-4"><%= @konfe.name %></h4>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p><b>Instagram:</b> <%= @konfe.insta_uname %> | </p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p>
+<h3> User Deatils 📂</h3><br/>
+
+<div class="card bg-light mb-3" style="max-width: 25rem;">
+  
+  <div class="card-body">
+    <h4 class="card-title"><%= @konfe.name %></h4>
+    <p class="card-text">Quote 😎</p>
+    <div class="card-header" ><i style="color: #FFFFB7"><%= @konfe.quote %></i></div>
+    
+  </div>
 </div>
 
 
+<div class="card bg-light mb-3" style="max-width: 25rem;">
+  <hr class="my-1">
 
+ <p class="lead"><strong style="color: #FFFFB7">👀 Instagram :</strong >
+  <%= @konfe.insta_uname %></p>
 
+   <p class="lead"><strong style="color: #FFFFB7">👻 Snapchat :</strong>
+  <%= @konfe.snap_uname %></p>
 
+ <p class="lead"><strong style="color: #FFFFB7">🧐 Age :</strong>
+  <%= @konfe.age %></p><br/>
 
-<p id="notice"><%= notice %></p>
+</div>
+<%= link_to 'Edit', edit_konfe_path(@konfe), class:"btn btn-outline-primary" %> | |
+<%= link_to 'Destroy', @konfe, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-outline-danger"%> | |
+<%= link_to 'Back', konves_path, class:"btn btn-outline-dark" %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @konfe.name %>
-</p>
-
-<p>
-  <strong>Insta uname:</strong>
-  <%= @konfe.insta_uname %>
-</p>
-
-<p>
-  <strong>Snap uname:</strong>
-  <%= @konfe.snap_uname %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @konfe.age %>
-</p>
-
-<p>
-  <strong>Quote:</strong>
-  <%= @konfe.quote %>
-</p>
-
-<%= link_to 'Edit', edit_konfe_path(@konfe) %> |
-<%= link_to 'Back', konves_path %>

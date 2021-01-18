@@ -1,0 +1,59 @@
+<div class="card bg-light mb-3" style="max-width: 25rem;">
+ 
+  <div class="card-body">
+
+
+
+ <div class="form-container">
+
+
+
+<h3>Sign up 🥳</h3>
+
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+<hr class="my-3">
+
+
+
+
+
+  <div class="form-container">
+   
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control text-center", placeholder: "Enter Email" %>
+  </div><br/>
+
+  <div class="form-container">
+
+    <%= f.password_field :password, autocomplete: "new-password" ,class:"form-control text-center", placeholder: "Enter Password"%>
+  </div><br/>
+
+  <div class="form-container">
+   
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"form-control text-center", placeholder: "Enter Password Again" %>
+  </div>
+  <hr class="my-3">
+
+  <div class="actions">
+    <%= f.submit "Sign up", class:"btn btn-outline-primary" %>
+  </div>
+<% end %>
+
+
+
+
+
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<%= render "devise/shared/links" %>
