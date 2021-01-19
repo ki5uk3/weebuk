@@ -1,11 +1,22 @@
 class KonvesController < ApplicationController
   before_action :set_konfe, only: [:show, :edit, :update, :destroy]
 
+
+def index
+
+@konves = Konfe.where(["name OR insta_uname OR snap_uname LIKE ?", "%#{params[:search]}%"])
+@konves = Konfe.paginate(page: params[:page], per_page: 5)
+end 
+
+
+
+
   # GET /konves
   # GET /konves.json
-  def index
-    @konves = Konfe.all
-  end
+  #def index
+  #@konves = Konfe.all
+  #end
+  
 
   # GET /konves/1
   # GET /konves/1.json
@@ -71,4 +82,8 @@ class KonvesController < ApplicationController
     def konfe_params
       params.require(:konfe).permit(:name, :insta_uname, :snap_uname, :age, :quote)
     end
+
+
+
 end
+

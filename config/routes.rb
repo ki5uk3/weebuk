@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   #get 'home/index'
   root "konves#new"
   get "home/about"
+
+
+
 end

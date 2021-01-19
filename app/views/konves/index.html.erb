@@ -9,7 +9,7 @@
 
 
 <% @konves.each do |konfe| %>
-<div class="card bg-light mb-2" style="max-width: 20rem;">
+<div class="card bg-light mb-2" style="max-width: 25rem;">
     <div class="card-body">
     <h5 class="card-title"><%= konfe.name %></h5>
     <p class="lead" style="color: white"><b>Age</b> :<strong style="color: #FFFFB7">
@@ -19,3 +19,10 @@
 </div>
 
   <% end %>
+
+
+
+<div class="flickr_pagination">
+     <%= will_paginate @konves, :container => false %>
+</div>
+
