@@ -1,30 +1,47 @@
-<center><div class="container">
-  <h3>😀</h3>
-  <p class="lead">Simple SocialMedia Directory</p>
-  <p>Just enter your Name, Snapchat-Instagram Username, Age and A Quote written by you. :3</p><br/>
-
-
-
-
-  <input type="text" class="form-control text-center" placeholder="Name" id="inputDefault"><br/>
+ <style type="text/css">
   
-  <input type="text" class="form-control text-center" placeholder="Snapchat Username" id="inputDefault"><br/>
-  
-  <input type="text" class="form-control text-center" placeholder="Instagram Username" id="inputDefault"><br/>
-  
-  <input type="text" class="form-control text-center" placeholder="Age" id="inputDefault"><br/>
-  
-  <input type="text" class="form-control text-center" placeholder="Quote" id="inputDefault"><br/>
-  
-  <button type="button" class="btn btn-outline-dark">Submit</button>
+  body {
+  background: linear-gradient(-45deg, #000000, #0a0a0a, #171717 );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+</style>
 
 
-  <%= search_form_for @q, remote: true do |f| %>
-  <%= f.label :name_cont, 'Full Name' %>
-  <%= f.search_field :name_cont %>
-  <%= f.submit %>
-<% end %>
+<div class="card bg-light mb-3" style="max-width: 25rem" >
 
-</div></center>
-
+  <h3 class="card-header">Webook 📕</h3>
+  <div class="card-body">
+    <h5 class="card-title">A Social Media Directory</h5>
+    <h6 class="card-subtitle text-muted">(Beta)</h6>
+  </div>
+  <img class="card-img-top" src="https://64.media.tumblr.com/34a3e1f57fcc07c4698cbfff10f1f4a6/tumblr_p9wz7xRFry1w9n94mo2_r1_500.gifv" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">A simple directory app to store your Name, Snapchat-Instagram Username, Age and Quote written by you</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><b>No Need</b> To Sign Up For Viewing Existing Records 😉</li>
+    <li class="list-group-item">Kind Of Like Old School Yearbook Stuff But <b>Online</b> ⏳</li>
+    <li class="list-group-item">Get Yourself Registered If You'd Like To Contribute 💫</li>
+  </ul>
+  <div class="card-body">
+    <a href="home/about" class="card-link"><button class="btn btn-outline-dark" >More ?</button></a>
+   <a href="konves" class="card-link" ><button class="btn btn-outline-dark">Directory </button> </a>
+  </div>
+  <div class="card-footer text-muted">
+    have a nice day :)
+  </div>
+</div>
 

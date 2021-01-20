@@ -24,7 +24,13 @@
   <%= @konfe.age %></p><br/>
 
 </div>
+
+
+
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_konfe_path(@konfe), class:"btn btn-outline-primary" %> | |
 <%= link_to 'Destroy', @konfe, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-outline-danger"%> | |
 <%= link_to 'Back', konves_path, class:"btn btn-outline-dark" %>
-
+<% else %>
+<%= link_to 'Back', konves_path, class:"btn btn-outline-dark" %>
+<% end %>

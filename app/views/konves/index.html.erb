@@ -1,14 +1,34 @@
 
+
+<div class="card bg-light mb-3" style="max-width: 25rem;">
+   <div class="card-body">
 <h3>Directory 📖</h3>
 
 <hr class="my-3">
 <%= link_to 'New Webook', new_konfe_path, class:"btn btn-outline-primary" %>
 <hr class="my-2">
 
+  </div>
+</div>
+
+
+
+
 
 
 
 <% @konves.each do |konfe| %>
+<% if user_signed_in?.! %>
+<div class="card bg-light mb-2" style="max-width: 25rem;">
+    <div class="card-body">
+    <h5 class="card-title"><%= konfe.name %></h5>
+    <p class="lead" style="color: white"><b>Age</b> :<strong style="color: #FFFFB7">
+  <%= konfe.age %></strong></p>
+  <td><%= link_to 'Show More', konfe, class:"btn btn-outline-success" %></td>
+  </div>
+</div>
+<% else %>
+<% if konfe.user == current_user %>
 <div class="card bg-light mb-2" style="max-width: 25rem;">
     <div class="card-body">
     <h5 class="card-title"><%= konfe.name %></h5>
@@ -18,7 +38,10 @@
   </div>
 </div>
 
-  <% end %>
+<% end %>
+<% end %>
+
+<% end %>
 
 
 

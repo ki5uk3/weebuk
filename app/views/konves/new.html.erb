@@ -1,6 +1,13 @@
-
+<% if user_signed_in? %>
 
 <%= render 'form', konfe: @konfe %>
 
 <% link_to 'Back', konves_path, class:"btn btn-outline-dark" %>
 </div>
+
+<% else %>
+
+<h1>Sign In Please</h1>
+
+
+<% end %>

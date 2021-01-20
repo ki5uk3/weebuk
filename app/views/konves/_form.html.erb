@@ -22,28 +22,36 @@
 
 
   <div class="field container">
-   <%= form.text_field :name, class:"form-control text-center", placeholder: "Name" %>
+   <%= form.text_field :name, maxlength: "40", class:"form-control text-center", placeholder: "Name" , :required => 'required'%>
   </div><br/>
 
   <div class="field container">
     
-    <%= form.text_field :insta_uname, class:"form-control text-center", placeholder: "Instagram Username"  %>
+    <%= form.text_field :insta_uname,  maxlength: "15" , class:"form-control text-center", placeholder: "Instagram Username"  %>
   </div><br/>
 
   <div class="field container">
 
-    <%= form.text_field :snap_uname, class:"form-control text-center", placeholder: "Snapchat Username"  %>
-  </div><br/>
-
-  <div class="field container">
-    
-    <%= form.text_field :age, class:"form-control text-center", placeholder: "Age"  %>
+    <%= form.text_field :snap_uname, maxlength: "15" , class:"form-control text-center", placeholder: "Snapchat Username"  %>
   </div><br/>
 
   <div class="field container">
     
-    <%= form.text_field :quote, class:"form-control text-center", placeholder: "Quote"  %>
+    <%= form.number_field :age, max: "169", class:"form-control text-center", placeholder: "Age" , :required => 'required' %>
+  </div><br/>
+
+  <div class="field container">
+    
+    <%= form.text_field :quote, maxlength: "150" ,class:"form-control text-center", placeholder: "Quote" , :required => 'required' %>
   </div>
+
+
+<div class="field container">
+    
+    <%= form.number_field :user_id, id: :konfe_user_id, class:"form-control text-center",value: current_user.id, type: :hidden %>
+  </div>
+
+
   <hr class="my-3">
 
   <div class="actions container">
