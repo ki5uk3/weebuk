@@ -1,11 +1,15 @@
 <%= form_with(model: konfe) do |form| %>
   <% if konfe.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(konfe.errors.count, "error") %> prohibited this Webook Profile from being saved:</h2>
+    <% render "alert"%>
+      
 
-      <ul>
         <% konfe.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+              
+   <div class="alert alert-dismissible alert-light text-center card bg-light mb-3" style="max-width: 25rem;">
+
+   <button type="button" class="close" data-dismiss="alert">&times;</button>
+  Only One Webook Profile Allowed For Now 😞
+   </div>
         <% end %>
       </ul>
     </div>

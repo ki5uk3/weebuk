@@ -1,3 +1,57 @@
+<script type="text/javascript">
+  
+
+function copyTextToClipboard(text) {
+  var textArea = document.createElement("textarea");
+
+
+  textArea.style.position = 'fixed';
+  textArea.style.top = 0;
+  textArea.style.left = 0;
+
+  textArea.style.width = '2em';
+  textArea.style.height = '2em';
+
+ 
+  textArea.style.padding = 0;
+
+  textArea.style.border = 'none';
+  textArea.style.outline = 'none';
+  textArea.style.boxShadow = 'none';
+
+
+  textArea.style.background = 'transparent';
+
+
+  textArea.value = text;
+
+  document.body.appendChild(textArea);
+
+  textArea.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+
+  document.body.removeChild(textArea);
+}
+
+function CopyLink() {
+  copyTextToClipboard(location.href);document.getElementById("demo").innerHTML = "Link Copied ✂ Now Share It With Friends";
+}
+
+
+
+</script>
+
+
+
+
+
 <h3> User Deatils 📂</h3><br/>
 
 <div class="card bg-light mb-3" style="max-width: 25rem;">
@@ -9,8 +63,6 @@
     
   </div>
 </div>
-
-
 <div class="card bg-light mb-3" style="max-width: 25rem;">
   <hr class="my-1">
 
@@ -25,12 +77,16 @@
 
 </div>
 
+<button class="btn btn-outline-dark" onclick="CopyLink()">Click To Copy This Page Link To Share</button>
+<hr class="my-1">
+<p id="demo"></p>
 
 
+<hr class="my-2">
 <% if user_signed_in? %>
 <%= link_to 'Edit', edit_konfe_path(@konfe), class:"btn btn-outline-primary" %> | |
 <%= link_to 'Destroy', @konfe, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-outline-danger"%> | |
 <%= link_to 'Back', konves_path, class:"btn btn-outline-dark" %>
 <% else %>
 <%= link_to 'Back', konves_path, class:"btn btn-outline-dark" %>
-<% end %>
+<%end %>

@@ -10,4 +10,8 @@ class User < ApplicationRecord
 end
 
 
+def validate_only_one_review_per_user
+  !(@user.konfe.include? @product)
+end
+
 
