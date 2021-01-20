@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'ransack'
 gem 'devise', '~> 4.2'
-gem "rename"
+
 gem 'dotenv-rails'
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
