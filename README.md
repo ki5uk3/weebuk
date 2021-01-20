@@ -1,24 +1,23 @@
-# README
+# Webook 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Internet version of yearbook.
 
-Things you may want to cover:
+You can add your name, snap-insta username, age and quote like you used to write in yearbook
 
-* Ruby version
+Made using Ruby on Rails.
 
-* System dependencies
+= = = = = = = = = = = = = = = = = = = = = = = = = =
+ 
+# Contains
 
-* Configuration
+Sign Up - Sign In feature
+Forget Password Feature working
+One entry per user
+Search feature enabled
+You can view records without signing up
+Sign Up required for new entry
 
-* Database creation
+= = = = = = = = = = = = = = = = = = = = = = = = = = 
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+( It's my first web development/RoR project so sorry for any errors and mistakes :3 )
