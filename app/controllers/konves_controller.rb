@@ -6,7 +6,7 @@ class KonvesController < ApplicationController
 
 
 def index
-@konves = Konfe.where(["name LIKE?", "%#{params[:search]}%"]).paginate(:page => params[:page],:per_page => 10)
+@konves = Konfe.where(["name LIKE?" , "%#{params[:search]}%"]).paginate(:page => params[:page],:per_page => 10)
 end
   # GET /konves
   # GET /konves.json
