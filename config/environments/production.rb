@@ -5,6 +5,10 @@ Rails.application.configure do
 
 
 
+class Application < Rails::Application
+  config.web_console.whitelisted_ips = '2409:4063:2288:3c58::9c7:38a0'
+end
+
 
 
 
@@ -22,7 +26,7 @@ config.action_mailer.smtp_settings = {
   # doesn't have to be Heroku, but you get the idea.
 
 
-  config.action_mailer.default_url_options = { :host => 'webuk.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'https://webuk.herokuapp.com/' }
 
 
 
