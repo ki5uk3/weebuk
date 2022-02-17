@@ -5,17 +5,13 @@ Rails.application.configure do
 
 
 
-class Application < Rails::Application
-  config.web_console.whitelisted_ips = '2409:4063:2288:3c58::9c7:38a0'
-end
-
 
 
 
 config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "example.com",
+    domain: "webuk.herokuapp.com",
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: ENV["GMAIL_USERNAME"],
@@ -26,7 +22,7 @@ config.action_mailer.smtp_settings = {
   # doesn't have to be Heroku, but you get the idea.
 
 
-  config.action_mailer.default_url_options = { :host => 'https://webuk.herokuapp.com/' }
+  config.action_mailer.default_url_options = { :host => 'webuk.herokuapp.com' }
 
 
 
