@@ -1,7 +1,7 @@
 databases:
-  - name: webook
+  - name: webuk
     databaseName: development
-    user: mysite
+    user: unr
     plan: free
 
 services:
