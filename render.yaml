@@ -1,6 +1,6 @@
 databases:
   - name: webook
-    databaseName: mysite
+    databaseName: development.sqlite3
     user: mysite
     plan: free
 
